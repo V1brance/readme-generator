@@ -32,9 +32,9 @@ ${data.projectDesc} \n
 
 ## Installation \n
 To install necessary dependencies, run the following command: \n
-\`\`\` \n
+\`\`\`
 ${data.dependencies} \n
-\`\`\` \n
+\`\`\`
 
 ## Usage \n
 ${data.repoInfo} \n
@@ -47,9 +47,9 @@ ${data.contributionInfo} \n
 
 ## Tests \n
 To run tests, run the following command: \n
-\`\`\` \n
+\`\`\`
 ${data.tests} \n
-\`\`\` \n
+\`\`\`
 
 ## Questions
 If you have any questions about this repo, open an issue or contact me directly at ${
