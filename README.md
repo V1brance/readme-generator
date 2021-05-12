@@ -1,66 +1,57 @@
+[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
 
-  
-  [![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)
+# Quality README Generator
 
-  # Quality README Generator 
+## Description
 
+An app built in Node.js to allow for quick production of high quality readme's. Utilizing the inquirer and fs libraries, simply enter the required information and copy the generated README. The readme is then totally customizable to your needs with a strong base to stand on!
 
-  ## Description 
+## Table of Contents
 
-  An app built in Node.js to allow for quick production of high quality readme's. Utilizing the inquirer and fs libraries, simply enter the required information and copy the generated README. The readme is then totally customizable to your needs with a strong base to stand on!  
+- [Installation](#installation)
 
-  ## Table of Contents 
+- [Usage](#usage)
 
-  * [Installation](#installation) 
+- [License](#license)
 
-  * [Usage](#usage) 
+- [Contributing](#contributing)
 
-  * [License](#license) 
+- [Tests](#tests)
 
-  * [Contributing](#contributing) 
+- [Questions](#questions)
 
-  * [Tests](#tests) 
+## Installation
 
-  * [Questions](#questions) 
+To install necessary dependencies, run the following command:
 
+```
 
-  ## Installation 
+npm i
 
-  To install necessary dependencies, run the following command: 
+```
 
-  ``` 
+## Usage
 
-  npm i 
+This is a project built for the University of Denver Bootcamp 2021. Thanks for checking it out!
 
-  ``` 
+## License
 
+This project is licensced under the WTFPL license
 
-  ## Usage 
+## Contributing
 
-  This is a project built for the University of Denver Bootcamp 2021. Thanks for checking it out! 
+If you run in to any issues, feel free to debug it or open an issue and I will do my best to check it out. This is a pretty simple app so I won't be super active on it.
 
+## Tests
 
-  ## License 
+To run tests, run the following command:
 
-  This project is licensced under the WTFPL license 
+```
 
-  
-  ## Contributing 
+npm test
 
-  If you run in to any issues, feel free to debug it or open an issue and I will do my best to check it out. This is a pretty simple app so I won't be super active on it. 
+```
 
+## Questions
 
-  ## Tests 
-
-  To run tests, run the following command: 
-
-  ``` 
-
-  npm test 
-
-  ``` 
-
-
-  ## Questions
-  If you have any questions about this repo, open an issue or contact me directly at sbrookshire99@gmail.com. You can find more of my work at [V1brance](https://www.github.com/V1brance).
-  
+If you have any questions about this repo, open an issue or contact me directly at sbrookshire99@gmail.com. You can find more of my work at [V1brance](https://www.github.com/V1brance).

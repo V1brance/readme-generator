@@ -12,52 +12,52 @@ function renderLicenseBadge(license) {
   }
 }
 
-// TODO: Create a function to generate markdown for README
+// So this function doesn't format nice because it is set up in template literal
+// and because of this the text inside needs to be left aligned or
+// spacing gets weird.
 function generateMarkdown(data) {
-  let customMarkdown = `
+  let customMarkdown = `${renderLicenseBadge(data.projectLic)}
+
+# ${data.projectTitle} \n
+
+## Description \n
+${data.projectDesc} \n
+## Table of Contents \n
+* [Installation](#installation) \n
+* [Usage](#usage) \n
+* [License](#license) \n
+* [Contributing](#contributing) \n
+* [Tests](#tests) \n
+* [Questions](#questions) \n
+
+## Installation \n
+To install necessary dependencies, run the following command: \n
+\`\`\` \n
+${data.dependencies} \n
+\`\`\` \n
+
+## Usage \n
+${data.repoInfo} \n
+
+## License \n
+This project is licensced under the ${data.projectLic} license \n
   
-  ${renderLicenseBadge(data.projectLic)}
+## Contributing \n
+${data.contributionInfo} \n
 
-  # ${data.projectTitle} \n
+## Tests \n
+To run tests, run the following command: \n
+\`\`\` \n
+${data.tests} \n
+\`\`\` \n
 
-  ## Description \n
-  ${data.projectDesc} \n
-  ## Table of Contents \n
-  * [Installation](#installation) \n
-  * [Usage](#usage) \n
-  * [License](#license) \n
-  * [Contributing](#contributing) \n
-  * [Tests](#tests) \n
-  * [Questions](#questions) \n
-
-  ## Installation \n
-  To install necessary dependencies, run the following command: \n
-  \`\`\` \n
-  ${data.dependencies} \n
-  \`\`\` \n
-
-  ## Usage \n
-  ${data.repoInfo} \n
-
-  ## License \n
-  This project is licensced under the ${data.projectLic} license \n
-  
-  ## Contributing \n
-  ${data.contributionInfo} \n
-
-  ## Tests \n
-  To run tests, run the following command: \n
-  \`\`\` \n
-  ${data.tests} \n
-  \`\`\` \n
-
-  ## Questions
-  If you have any questions about this repo, open an issue or contact me directly at ${
+## Questions
+If you have any questions about this repo, open an issue or contact me directly at ${
     data.email
   }. You can find more of my work at [${data.github}](https://www.github.com/${
     data.github
   }).
-  `;
+`;
   return customMarkdown;
 }
 
