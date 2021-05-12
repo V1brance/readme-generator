@@ -2,7 +2,6 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const genMark = require("./utils/generateMarkdown");
-console.log(genMark.generateMarkdown);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -40,7 +39,7 @@ function collectData() {
         type: "list",
         name: "projectLic",
         message: questions[4],
-        choices: ["MIT", "Open-Source", "Community License", "GNU GPLv3"],
+        choices: ["MIT", "WTFPL", "Creative Commons", "GNU GPLv3"],
       },
       {
         name: "dependencies",
@@ -73,12 +72,19 @@ function collectData() {
         repoInfo: answers.repoInfo,
         contributionInfo: answers.contributionInfo,
       };
-      genMark.generateMarkdown(userResponse);
+      userMarkdown = genMark.generateMarkdown(userResponse);
+      writeToFile(userMarkdown);
     });
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(data) {
+  fs.writeFile("README.md", data, (err) => {
+    if (err) throw err;
+
+    console.log("File succesfully saved");
+  });
+}
 
 // TODO: Create a function to initialize app
 function init() {
