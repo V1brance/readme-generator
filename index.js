@@ -1,6 +1,8 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const genMark = require("./utils/generateMarkdown");
+console.log(genMark.generateMarkdown);
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -16,8 +18,6 @@ const questions = [
 ];
 
 function collectData() {
-  let projectTitle;
-  let projectDescription;
   inquirer
     .prompt([
       {
@@ -45,10 +45,12 @@ function collectData() {
       {
         name: "dependencies",
         message: questions[5],
+        default: "npm i",
       },
       {
         name: "tests",
         message: questions[6],
+        default: "npm test",
       },
       {
         name: "repoInfo",
@@ -60,7 +62,18 @@ function collectData() {
       },
     ])
     .then((answers) => {
-      console.info(answers);
+      let userResponse = {
+        github: answers.github,
+        email: answers.email,
+        projectTitle: answers.projectTitle,
+        projectDesc: answers.projectDesc,
+        projectLic: answers.projectLic,
+        dependencies: answers.dependencies,
+        tests: answers.tests,
+        repoInfo: answers.repoInfo,
+        contributionInfo: answers.contributionInfo,
+      };
+      genMark.generateMarkdown(userResponse);
     });
 }
 
