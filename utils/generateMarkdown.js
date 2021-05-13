@@ -21,6 +21,7 @@ function generateMarkdown(data) {
 # ${data.projectTitle} \n
 
 ## Description \n
+Created with readme-generator from my Github at [V1brance](https://www.github.com/V1brance)
 ${data.projectDesc} \n
 ## Table of Contents \n
 * [Installation](#installation) \n
